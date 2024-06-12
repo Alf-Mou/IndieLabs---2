@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from games.models import Games
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'games/index.html')
