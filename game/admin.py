@@ -1,5 +1,5 @@
 from django.contrib import admin
-from games.models import Games
+from game.models import Games
 
 class ListandoGames(admin.ModelAdmin):
     list_display = ("id", "nome")
