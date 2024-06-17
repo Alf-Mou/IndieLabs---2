@@ -1,0 +1,22 @@
+{% load static %}
+<header class="cabecalho">
+        <a href="{% url 'index' %}" class="cabecalho__logo">    
+            <img src="{% static 'assets/logo.png' %}">
+        </a>
+        <div class="cabecalho_container">
+            <nav class="cabecalho_links">
+                <a class="cabecalho_links__link" href="#" >Destaque</a>
+                <a class="cabecalho_links__link" href="#" >Categorias</a>
+                <a class="cabecalho_links__link" href="#" >Console</a>
+                <a class="cabecalho_links__link" href="#" >Sobre nós</a>
+            </nav>
+            <div class="cabecalho__busca">
+                    <input type="search" id="campoPesquisa" class="cabecalho__pesquisa" placeholder="Pesquisar">
+            </div>
+            <div class="cabecalho__botoes">
+                <a href="#" class="cabecalho__botao1"><img src="{% static 'assets/user.png' %}">Entrar</a>
+                <a  href="#" class="cabecalho__botao2">Criar conta</a>
+            </div>
+            
+        </div>
+</header>
