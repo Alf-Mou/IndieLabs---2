@@ -4,6 +4,7 @@
     --background-color:#301341;
     --cor-secundaria:#9B65EC;
     --font-color: #FFFFFF;
+    --footer-color: #21022E;
 
     --fonte-principal: "Inter", sans-serif;
 }
@@ -107,4 +108,29 @@ body {
     text-decoration: none;
     background-color: var(--cor-secundaria);
     border-radius: 6px;
+}
+
+.rodape {
+    background-color: var(--footer-color);
+    border-top: solid 1px var(--font-color);
+    padding: 24px 0;
+}
+
+.rodape__conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 153px;
+}
+
+.rodape__texto {
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    color: var(--font-color);
+    font-weight: 400;
+}
+
+.rodape__links {
+    display: flex;
+    gap: 16px;
 }
