@@ -1,4 +1,51 @@
 {% extends 'game/base.html' %}
 {% load static %}
 {% block content %}
+<main class="principal">
+  <div class="principal__container">
+    <div class="principal__banner">
+        <img src="{% static 'assets/banner-teste.png' %}">
+    </div>
+    <div class="principal__titulo">
+        <p class="principal__texto">Recomendado para você</p>
+        <div class="principal__setas">
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"><img src="{% static 'assets/left-icon.png' %}"></div>
+          <div class="swiper-button-next"><img src="{% static 'assets/right-icon.png'%}"></div>
+        </div>
+    </div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+          {% if game_grupo %}
+            {% for game in game_grupo %}
+              <div class="swiper-slide">
+                <a class="swiper__container" href="{% url 'indiegame' game.id %}">
+                    <img src="{{ game.imagem_miniatura.url}}">
+                    <p class="swiper__nome">{{ game.nome }}</p>
+                </a>
+              </div>
+            {% endfor %}
+          {% else %}
+          {% endif %}
+        </div>       
+    </div>
+  </div>
+</main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 24,
+        slidesPerView: 5,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+  },
+    });
+  </script>
 {% endblock %}

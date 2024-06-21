@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from game.models import Games
+from game.models import Game
 
 def index(request):
-    game = Games.objects.all()
+    game = Game.objects.all()
     return render(request, 'game/index.html', {"game_grupo": game})
 
 def indiegame(request, game_id):

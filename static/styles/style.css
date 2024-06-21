@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 
 .cabecalho {
@@ -108,6 +108,88 @@ body {
     text-decoration: none;
     background-color: var(--cor-secundaria);
     border-radius: 6px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.principal__container {
+    width: 1320px;
+}
+
+.principal__titulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 48px 0px 32px 0px;
+}
+
+.principal__texto {
+    font-family: var(--fonte-principal);
+    font-size: 36px;
+    color: var(--font-color);
+    font-weight: 800;
+}
+
+.principal__setas {
+    display: flex;
+    gap: 16px;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: none !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: static !important;  /* Remove absolute positioning */
+    top: auto !important;  /* Reset top positioning */
+    width: auto !important;  /* Reset width */
+    height: auto !important;  /* Reset height */
+    margin-top: 0 !important;  /* Reset margin-top */
+    z-index: 10 !important;  /* Ensure the buttons are on top */
+    cursor: pointer !important;  /* Keep the cursor pointer */
+    display: flex !important;  /* Keep display flex */
+    align-items: center !important;  /* Keep items centered */
+    justify-content: center !important;  /* Keep items centered */
+    color: initial !important;  /* Reset color */
+    background-size: contain !important;  /* Ensure background image is contained */
+    background-repeat: no-repeat !important;  /* Ensure background image doesn't repeat */
+    background-position: center !important;  /* Center the background image */
+}
+
+.swiper-button-prev {
+    background-image: url('{% static "assets/left-icon.png" %}') !important;
+}
+.swiper-button-next {
+    background-image: url('{% static "assets/right-icon.png" %}') !important;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 0.5em 0;
+}
+
+.swiper__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-decoration: none;
+    margin-bottom: 88px;
+}
+
+.swiper__nome {
+    font-family: var(--fonte-principal);
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .rodape {
