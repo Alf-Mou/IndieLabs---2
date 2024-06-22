@@ -1,0 +1,55 @@
+{% extends 'game/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="principal__game">
+    <div class="game__container">
+        <a class="principal__voltar" href="{% url 'index' %}">
+            <img src="{% static 'assets/arrow-left.png' %}">
+            <p class="voltar__texto">Voltar</p>
+        </a>
+        <div class="game__conteudo">
+            <div class="conteudo__imagens">
+                <div>
+                    <img src="{{ game.imagem_gameplay1.url }}" >
+                </div>
+                <div>
+                    <img src="{{ game.imagem_gameplay2.url }}" >
+                </div>
+                <div>
+                    <img src="{{ game.imagem_gameplay3.url }}" >
+                </div>
+                <div>
+                    <img src="{{ game.imagem_gameplay4.url }}" >
+                </div>
+            </div>
+            <div class="conteudo__informacoes">
+                <p class="informacoes__nome">{{ game.nome }}</p>
+                <div class="conteudo__container">
+                    <div class="container__infos">
+                        <svg class="informacoes__linha" xmlns="http://www.w3.org/2000/svg" width="1200" height="8" viewBox="0 0 1200 8" fill="none">
+                            <!-- Segunda linha -->
+                            <path class="linha2" d="M489 4H1132" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Primeira linha -->
+                            <path class="linha1" d="M4 4H489" stroke="#9B65EC" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                        <div class="informacoes__descricao">
+                            <p class="descricao__texto">{{ game.descricao_completa|linebreaksbr }}</p>
+                        </div>
+                        <div class="infomacoes__adicionais">
+                            <p class="adicionais__titulo">Informações adicionais</p>
+                            <p class="adicionais__texto">Data de lançamento: {{game.data_de_lancamento}}</p>
+                            <p class="adicionais__texto">Desenvolvedor: {{game.desenvolvedor}}</p>
+                            <p class="adicionais__texto">Marcadores do jogo: {{game.estudio}}</p>
+                        </div>
+                    </div>
+                    <img class="conteudo__img-principal" src="{{ game.imagem_solta.url }}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

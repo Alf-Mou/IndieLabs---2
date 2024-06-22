@@ -16,6 +16,7 @@
 
 body {
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 .cabecalho {
@@ -190,6 +191,122 @@ body {
     color: var(--font-color);
     font-size: 18px;
     font-weight: 800;
+}
+
+.principal__game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game__container {
+    width: 1320px;
+    margin-bottom: 80px;
+}
+
+.principal__voltar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    margin: 54px 0px 42px 0px;
+}
+
+.voltar__texto {
+    color: var(--font-color);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+.game__conteudo {
+    display: flex;
+    align-items: center;
+
+}
+
+.conteudo__imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-right: 24px;
+}
+
+.conteudo__informacoes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 20px;
+}
+
+.informacoes__linha {
+    position: absolute
+}
+
+.informacoes__nome {
+    color: var(--font-color);
+    font-family: var(--fonte-principal);
+    font-size: 120px;
+    font-weight: 800;
+}
+
+.conteudo__container {
+    display: flex;
+    align-items: center;
+}
+
+.container__infos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.linha1 {
+    z-index: 2;
+}
+
+.linha1 {
+    z-index: 1;
+}
+
+.informacoes__descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 48px 0px;
+}
+
+.descricao__texto {
+    color: var(--font-color);
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    font-weight: 400;
+    width: 573px;
+}
+
+.infomacoes__adicionais {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.adicionais__titulo {
+    color: var(--font-color);
+    font-family: var(--fonte-principal);
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.adicionais__texto {
+    color: var(--font-color);
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.conteudo__img-principal {
+    z-index: 2;
 }
 
 .rodape {
