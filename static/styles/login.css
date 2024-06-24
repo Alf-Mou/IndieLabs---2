@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --background-color:#301341;
+    --cor-secundaria:#9B65EC;
+    --font-color: #FFFFFF;
+    --footer-color: #21022E;
+
+    --fonte-principal: "Inter", sans-serif;
+}
+
+.login__container {
+    background-color: var(--font-color);
+}

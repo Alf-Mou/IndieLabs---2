@@ -8,3 +8,9 @@ def index(request):
 def indiegame(request, game_id):
     game = get_object_or_404(Game, pk=game_id)
     return render(request, 'game/indiegame.html', {"game": game})
+
+def cadastro(request):
+    return render(request, 'game/cadastro.html')
+
+def login(request):
+    return render(request, 'game/login.html')
