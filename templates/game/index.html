@@ -7,12 +7,12 @@
         <img src="{% static 'assets/banner-teste.png' %}">
     </div>
     <div class="principal__titulo">
-        <p class="principal__texto">Recomendado para você</p>
-        <div class="principal__setas">
-          <!-- navigation buttons -->
-          <div class="swiper-button-prev"><img src="{% static 'assets/left-icon.png' %}"></div>
-          <div class="swiper-button-next"><img src="{% static 'assets/right-icon.png'%}"></div>
-        </div>
+      <p class="principal__texto">Recomendado para você</p>
+      <div class="principal__setas">
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"><img src="{% static 'assets/left-icon.png' %}"></div>
+        <div class="swiper-button-next"><img src="{% static 'assets/right-icon.png'%}"></div>
+      </div>
     </div>
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -36,7 +36,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
-        spaceBetween: 24,
+        spaceBetween: 32,
         slidesPerView: 5,
         pagination: {
             el: '.swiper-pagination',

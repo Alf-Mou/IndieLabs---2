@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 19.5px 16px;
+    border-bottom: solid 1px var(--font-color);
 }
 
 .cabecalho_container {
@@ -115,12 +116,17 @@ body {
 .principal {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     
 }
 
 .principal__container {
-    width: 1320px;
+    width: 1248px;
+}
+
+.principal__banner {
+    margin-top: 32px;
 }
 
 .principal__titulo {
@@ -134,7 +140,7 @@ body {
     font-family: var(--fonte-principal);
     font-size: 36px;
     color: var(--font-color);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .principal__setas {
