@@ -11,16 +11,16 @@
         <div class="game__conteudo">
             <div class="conteudo__imagens">
                 <div>
-                    <img src="{{ game.imagem_gameplay1.url }}" >
+                    <img class="imagens__gameplay" src="{{ game.imagem_gameplay1.url }}" >
                 </div>
                 <div>
-                    <img src="{{ game.imagem_gameplay2.url }}" >
+                    <img class="imagens__gameplay" src="{{ game.imagem_gameplay2.url }}" >
                 </div>
                 <div>
-                    <img src="{{ game.imagem_gameplay3.url }}" >
+                    <img class="imagens__gameplay" src="{{ game.imagem_gameplay3.url }}" >
                 </div>
                 <div>
-                    <img src="{{ game.imagem_gameplay4.url }}" >
+                    <img class="imagens__gameplay" src="{{ game.imagem_gameplay4.url }}" >
                 </div>
             </div>
             <div class="conteudo__informacoes">
@@ -35,6 +35,9 @@
                         </svg>
                         <div class="informacoes__descricao">
                             <p class="descricao__texto">{{ game.descricao_completa|linebreaksbr }}</p>
+                            <div class="img__container">
+                                <img class="conteudo__img-principal" src="{{ game.imagem_solta.url }}">
+                            </div>
                         </div>
                         <div class="infomacoes__adicionais">
                             <p class="adicionais__titulo">Informações adicionais</p>
@@ -43,10 +46,8 @@
                             <p class="adicionais__texto">Marcadores do jogo: {{game.estudio}}</p>
                         </div>
                     </div>
-                    <img class="conteudo__img-principal" src="{{ game.imagem_solta.url }}">
                 </div>
             </div>
-
         </div>
     </div>
 </main>

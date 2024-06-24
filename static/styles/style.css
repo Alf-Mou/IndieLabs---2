@@ -203,6 +203,7 @@ body {
 .principal__game {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -229,16 +230,20 @@ body {
 
 .game__conteudo {
     display: flex;
-    align-items: center;
-
 }
 
 .conteudo__imagens {
     display: flex;
     flex-direction: column;
-    gap: 24px;
     margin-right: 24px;
+    justify-content: space-between;
 }
+
+.imagens__gameplay {
+    width: 395px;
+    height: 240px;
+}
+
 
 .conteudo__informacoes {
     display: flex;
@@ -254,8 +259,8 @@ body {
 .informacoes__nome {
     color: var(--font-color);
     font-family: var(--fonte-principal);
-    font-size: 120px;
-    font-weight: 800;
+    font-size: 96px;
+    font-weight: 400;
 }
 
 .conteudo__container {
@@ -279,17 +284,28 @@ body {
 
 .informacoes__descricao {
     display: flex;
+    gap: 15px;
+    margin: 32px 0 24px 0px;
+    justify-content: flex-end;
+}
+
+.img__container {
+    display: flex;
     flex-direction: column;
-    gap: 32px;
-    margin: 48px 0px;
+    justify-content: flex-end;
+}
+
+.conteudo__img-principal {
+    height: 582px;
+    z-index: 2;
 }
 
 .descricao__texto {
     color: var(--font-color);
     font-family: var(--fonte-principal);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    width: 573px;
+    width: 497px;
 }
 
 .infomacoes__adicionais {
@@ -302,7 +318,7 @@ body {
     color: var(--font-color);
     font-family: var(--fonte-principal);
     font-size: 36px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .adicionais__texto {
@@ -312,9 +328,7 @@ body {
     font-weight: 400;
 }
 
-.conteudo__img-principal {
-    z-index: 2;
-}
+
 
 .rodape {
     background-color: var(--footer-color);
