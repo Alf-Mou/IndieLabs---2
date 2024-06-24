@@ -20,10 +20,11 @@ body {
 }
 
 .cabecalho {
+    background-color: var(--footer-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 22px 56px;
+    padding: 19.5px 16px;
 }
 
 .cabecalho_container {
