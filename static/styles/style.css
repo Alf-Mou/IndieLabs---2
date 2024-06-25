@@ -235,7 +235,8 @@ body {
 .conteudo__imagens {
     display: flex;
     flex-direction: column;
-    margin-right: 24px;
+    margin-right: 32px;
+    gap: 32px;
     justify-content: space-between;
 }
 
@@ -284,7 +285,7 @@ body {
 
 .informacoes__descricao {
     display: flex;
-    gap: 15px;
+    gap: 32px;
     margin: 32px 0 24px 0px;
     justify-content: flex-end;
 }

@@ -1,10 +1,41 @@
 {% extends 'game/base-cad-log.html' %}
 {% load static %}
 {% block content %}
-<main class="login__principal">
     <div class="login__container">
-        <img src="{% static 'assets/background-gamer.png' %}" >
+        <div class="login-campos">
+            <div class="container__logo">
+                <a href="{% url 'index' %}" class="campos__logo">    
+                    <img class="logo__img" src="{% static 'assets/logo.png' %}">
+                </a>
+            </div>
+            <p class="campos__titulo">Faça seu cadastro agora!</p>
+                <form class="campos__forms" action="/submit_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-grupo">
+                        <label for="nome"></label>
+                        <input class="form__input" type="text" id="nome" name="nome" placeholder="Nome completo" required >
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email"></label>
+                        <input class="form__input" type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="senha"></label>
+                        <input class="form__input" type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div>
+                    <div class="form-grupo form-grupo-checkbox">
+                        <input class="form__checkbox" type="checkbox" id="termos" name="termos" required >
+                        <label  class="checkbox__frase" for="termos">Eu li e aceito os <a href="#" class="checkbox__frase-link">Termos de uso</a></label>
+                    </div>
+                    <div class="form-grupo">
+                        <button class="form-botao" type="submit">Cadastrar</button>
+                    </div>
+                    <hr>
+                    <div class="form-grupo">
+                        <button class="form-botao form-botao-google"><img src="{% static 'assets/google-logo.png' %}"> Fazer login com o Google</button>
+                    </div>
+                    <p class="campos__frase-login">Já tem conta?<a class="campos__link-login" href="#">Faça seu login aqui</a></p>
+                </form>
+        </div>
     </div>
-</main>
-
 {% endblock %}
