@@ -1,5 +1,42 @@
 {% extends 'game/base-cad-log.html' %}
 {% load static %}
 {% block content %}
-
+    <div class="login__container">
+        <div class="login-campos">
+            <div class="container__logo">
+                <a href="{% url 'index' %}" class="campos__logo">    
+                    <img class="logo__img" src="{% static 'assets/logo.png' %}">
+                </a>
+            </div>
+            <p class="campos__titulo">É bom te ver novamente!</p>
+                <form class="campos__forms" action="/submit_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-grupo">
+                        <label for="email"></label>
+                        <input class="form__input" type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="senha"></label>
+                        <input class="form__input" type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div>
+                    <div class="form-switch">
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input class="input" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="switch-frase">Lembrar senha</p>
+                        </div>
+                        <a href="#" class="switch-link">Esqueceu a senha?</a>
+                    </div>
+                    <div class="form-grupo">
+                        <button class="form-botao" type="submit">Login</button>
+                    </div>
+                    <hr>
+                    <div class="form-grupo">
+                        <button class="form-botao form-botao-google"><img src="{% static 'assets/google-logo.png' %}"> Fazer login com o Google</button>
+                    </div>
+                </form>
+        </div>
+    </div>
 {% endblock %}
