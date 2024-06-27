@@ -403,3 +403,10 @@ body {
     flex-direction: column;
     gap: 24px;
 }
+
+.todos__nao-encontrado {
+    font-size: 75px;
+    font-weight: 800;
+    font-family: var(--fonte-principal);
+    color: var(--font-color);
+}

@@ -16,7 +16,13 @@ def login(request):
     return render(request, 'game/login.html')
 
 def buscar(request):
-    return render(request, 'game/buscar.html')
+    game = Game.objects.all()
+    if 'buscar' in request.GET:
+        nome_a_buscar = request.GET['buscar']
+        if nome_a_buscar:
+            game = game.filter(nome__icontains=nome_a_buscar)
+
+    return render(request, 'game/buscar.html', {"game_grupo": game})
 
 def todosJogos(request):
     game = Game.objects.all()
