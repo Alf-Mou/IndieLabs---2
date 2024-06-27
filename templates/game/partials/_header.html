@@ -5,13 +5,15 @@
         </a>
         <div class="cabecalho_container">
             <nav class="cabecalho_links">
-                <a class="cabecalho_links__link" href="#" >Destaque</a>
+                <a class="cabecalho_links__link" href="{% url 'todosJogos' %}" >Todos os jogos</a>
                 <a class="cabecalho_links__link" href="#" >Categorias</a>
                 <a class="cabecalho_links__link" href="#" >Console</a>
                 <a class="cabecalho_links__link" href="#" >Sobre nós</a>
             </nav>
             <div class="cabecalho__busca">
-                    <input type="search" id="campoPesquisa" class="cabecalho__pesquisa" placeholder="Pesquisar">
+                <form action="{% url 'buscar' %}">
+                    <input type="text" name="buscar" id="campoPesquisa" class="cabecalho__pesquisa" placeholder="Pesquisar">
+                </form>
             </div>
             <div class="cabecalho__botoes">
                 <a href="{% url 'login' %}" class="cabecalho__botao1"><img src="{% static 'assets/user.png' %}">Entrar</a>

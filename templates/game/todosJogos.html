@@ -1,0 +1,28 @@
+{% extends 'game/base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="principal__todos">
+    <div class="todos__container">
+        <a class="todos__voltar" href="{% url 'index' %}">
+            <img src="{% static 'assets/arrow-left.png' %}">
+            <p class="voltar__texto">Voltar</p>
+        </a>
+        <div class="todos__container__jogos">
+            <p class="jogos__frase">Todos os jogos ({{ game_grupo|length }})</p>
+            <div class="jogos__jogos">
+                {% if game_grupo %}
+                    {% for game in game_grupo %}
+                        <div class="jogos__container-individual">
+                            <img src="{{ game.imagem_miniatura.url}}">
+                            <p class="swiper__nome">{{ game.nome }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

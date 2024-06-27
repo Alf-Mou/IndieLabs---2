@@ -14,3 +14,10 @@ def cadastro(request):
 
 def login(request):
     return render(request, 'game/login.html')
+
+def buscar(request):
+    return render(request, 'game/buscar.html')
+
+def todosJogos(request):
+    game = Game.objects.all()
+    return render(request, 'game/todosJogos.html', {"game_grupo": game})

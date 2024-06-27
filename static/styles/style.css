@@ -355,3 +355,51 @@ body {
     display: flex;
     gap: 16px;
 }
+
+.principal__todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos__container {
+    width: 1320px;
+}
+
+.todos__voltar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    margin: 50px 0px 42px 0px;
+    
+}
+
+.todos__container__jogos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 75px;
+    
+}
+
+.jogos__frase {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: var(--fonte-principal);
+    color: var(--font-color);
+}
+
+.jogos__jogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.jogos__container-individual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
