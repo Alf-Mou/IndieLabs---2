@@ -16,13 +16,20 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-image: url("/static/assets/background.jpg");
+    display: flex;
+    flex-direction: column;
 }
 
 .login__container{
     display: flex;
     flex-direction: row-reverse;
+    flex: 1;
 
 }
 
