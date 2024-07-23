@@ -1,19 +1,18 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from game.models import Game
+from django.contrib import messages
 
 def index(request):
+    if not request.user.is_authenticated:
+        messages.error(request, "Usuário não logado")
+        return redirect('login')
+
     game = Game.objects.all()
     return render(request, 'game/index.html', {"game_grupo": game})
 
 def indiegame(request, game_id):
     game = get_object_or_404(Game, pk=game_id)
     return render(request, 'game/indiegame.html', {"game": game})
-
-def cadastro(request):
-    return render(request, 'game/cadastro.html')
-
-def login(request):
-    return render(request, 'game/login.html')
 
 def buscar(request):
     game = Game.objects.all()
