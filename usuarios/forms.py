@@ -1,14 +1,14 @@
 from django import forms
 
 class LoginForms(forms.Form):
-    email=forms.EmailField(
-        label="Email",
+    nome_completo=forms.CharField(
+        label="Nome",
         required=True,
         max_length=100,
-        widget=forms.EmailInput(
+                widget=forms.TextInput(
             attrs={
                 "class": "form__input",
-                "placeholder": "Email"
+                "placeholder": "Nome completo"
             }
         )
     )
@@ -39,18 +39,18 @@ class CadastroForms(forms.Form):
     )
 
 
-    pais = forms.ChoiceField(
-        label="País",
-        required=True,
-        choices=[('', 'Selecione um país')],  
-        widget=forms.Select(
-            attrs={
-                "id": "country",
-                "class": "form__select",
-                "placeholder": "Selecione um país"
-            }
-        )
-    )
+    # pais=forms.ChoiceField(
+    #     label="País",
+    #     required=True,
+    #     choices=[('', 'Selecione um país')],  
+    #     widget=forms.Select(
+    #         attrs={
+    #             "id": "country",
+    #             "class": "form__select",
+    #             "placeholder": "Selecione um país"
+    #         }
+    #     )
+    # )
 
     email=forms.EmailField(
         label="Email",
